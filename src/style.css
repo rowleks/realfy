@@ -19,7 +19,28 @@
 }
 
 @layer components {
+  .wrapper {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center py-3 px-5 md:px-7 text-white font-medium bg-black rounded-lg hover:bg-black/80 transition-colors duration-300;
+  }
 }
 
 @layer utilities {
+  .slide-fade-enter-active,
+  .slide-fade-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  .slide-fade-enter-to,
+  .slide-fade-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1 class="text-2xl text-green-500">Homepage</h1>
-  </div>
+  <NavBar />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NavBar from "@/components/header/Navbar.vue";
+</script>
 
 <style scoped></style>
