@@ -5,8 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-const props = defineProps(["link", "text"]);
+defineProps(["link", "text"]);
 </script>
 
 <style scoped></style>

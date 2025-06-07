@@ -16,6 +16,10 @@
   h1 {
     @apply text-3xl font-bold text-primary;
   }
+
+  h1.title-heading {
+    @apply font-semibold text-5xl md:text-7xl lg:text-8xl xl:text-[12rem] leading-[1.1] -tracking-[3px];
+  }
 }
 
 @layer components {
@@ -25,6 +29,10 @@
 
   .btn {
     @apply inline-flex items-center justify-center py-3 px-5 md:px-7 text-white font-medium bg-black rounded-lg hover:bg-black/80 transition-colors duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-[#f7f7f7] border-2 border-[#e8e8e8] rounded-4xl uppercase inline-flex items-center justify-center px-4 py-2 font-medium text-xs md:text-base;
   }
 }
 
