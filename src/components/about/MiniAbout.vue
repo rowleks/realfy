@@ -1,18 +1,31 @@
 <template>
-  <div class="flex gap-10">
-    <div>
-      <SectionHeading section="About Us"
-        >The ideal way to find your home</SectionHeading
-      >
-      <div>
-        <p></p>
-        <ButtonPrimary link="#"></ButtonPrimary>
+  <section class="max-w-[75rem] mx-auto px-5">
+    <div class="flex flex-col md:flex-row gap-12">
+      <div class="space-y-10 md:max-w-1/2">
+        <div class="space-y-4 max-w-lg">
+          <SectionHeading section="About Us"
+            >The ideal way to find your home</SectionHeading
+          >
+        </div>
+        <div class="space-y-6">
+          <p>
+            Wake up to the sound of waves and the smell of salt air in one of
+            our stunning coastal homes. Perfect for those seeking a serene
+            escape, these properties offer unmatched ocean views and direct
+            beach safe neighborhoods, and nearby schools access.
+          </p>
+          <ButtonPrimary link="#">Read more</ButtonPrimary>
+        </div>
+      </div>
+      <div class="rounded-3xl">
+        <img
+          src="../../assets/images/about-image.jpg"
+          alt="about image"
+          class="rounded-3xl"
+        />
       </div>
     </div>
-    <div>
-      <img src="../../assets/images/about-image.jpg" alt="about image" />
-    </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
