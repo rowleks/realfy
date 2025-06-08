@@ -1,11 +1,11 @@
 <template>
-  <a :href="link" class="btn">
-    {{ text }}
+  <a :href="link || '#'" class="btn">
+    <slot />
   </a>
 </template>
 
 <script setup lang="ts">
-defineProps(["link", "text"]);
+defineProps(["link"]);
 </script>
 
 <style scoped></style>

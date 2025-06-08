@@ -7,11 +7,9 @@
         class="relative z-20 cursor-pointer"
       />
       <NavLinks class="hidden md:block" />
-      <ButtonPrimary
-        link="/explore"
-        text="Explore all"
-        class="hidden md:block"
-      />
+      <ButtonPrimary link="/explore" class="hidden md:block"
+        >Explore All</ButtonPrimary
+      >
 
       <div class="md:hidden relative z-20">
         <img

@@ -2,13 +2,7 @@
   <div>
     <section>
       <div class="space-y-4 text-center wrapper">
-        <TitleButton>
-          <div class="flex items-center gap-2">
-            <HomeSvg class="size-4 md:size-5" />
-            <h5>Buy & Sell Your Dream</h5>
-          </div>
-        </TitleButton>
-        <h1 class="title-heading">REAL-ESTATE</h1>
+        <PageHeading subTitle="Buy & Sell Your Dream">REAL-ESTATE</PageHeading>
         <img
           src="../../assets/images/hero-image.png"
           alt="Hero Image"
@@ -20,8 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import TitleButton from "../buttons/TitleButton.vue";
-import HomeSvg from "../svg/HomeSvg.vue";
+import PageHeading from "../headings/PageHeading.vue";
 </script>
 
 <style scoped></style>

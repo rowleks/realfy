@@ -67,7 +67,7 @@ import CarSvg from "../svg/CarSvg.vue";
 import CrossSvg from "../svg/CrossSvg.vue";
 import LocationSvg from "../svg/LocationSvg.vue";
 import ShowerSvg from "../svg/ShowerSvg.vue";
-import type { Property } from "./utils/fetchListings";
+import type { Property } from "../../utils/fetchListings";
 
 const props = defineProps<{
   listing: Property;
