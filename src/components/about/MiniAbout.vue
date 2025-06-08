@@ -14,7 +14,7 @@
             escape, these properties offer unmatched ocean views and direct
             beach safe neighborhoods, and nearby schools access.
           </p>
-          <ButtonPrimary link="#">Read more</ButtonPrimary>
+          <ButtonPrimary link="#">Read More</ButtonPrimary>
         </div>
       </div>
       <div class="rounded-3xl">

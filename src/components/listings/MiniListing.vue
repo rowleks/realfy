@@ -16,7 +16,7 @@
         </template>
       </div>
       <div class="text-center">
-        <ButtonPrimary link="/listings">Explore all</ButtonPrimary>
+        <ButtonPrimary link="/listings">Explore All</ButtonPrimary>
       </div>
     </div>
   </section>

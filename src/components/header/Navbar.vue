@@ -8,7 +8,7 @@
       />
       <NavLinks class="hidden md:block" />
       <ButtonPrimary link="/explore" class="hidden md:block"
-        >Explore all</ButtonPrimary
+        >Explore All</ButtonPrimary
       >
 
       <div class="md:hidden relative z-20">

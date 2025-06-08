@@ -6,7 +6,7 @@
       </li>
     </ul>
   </nav>
-  <ButtonPrimary link="/explore" text="Explore all" class="mt-7" />
+  <ButtonPrimary link="/explore" text="Explore All" class="mt-7" />
 </template>
 
 <script setup lang="ts">
