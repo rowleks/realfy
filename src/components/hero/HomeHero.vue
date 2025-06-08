@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="py-10 md:py-20">
+    <section>
       <div class="space-y-4 text-center wrapper">
         <TitleButton>
           <div class="flex items-center gap-2">
