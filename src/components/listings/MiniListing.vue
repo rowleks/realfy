@@ -3,8 +3,8 @@
     <div class="space-y-8">
       <div class="text-center space-y-4">
         <SectionHeading section="Recent Properties"
-          >Featured properties </SectionHeading
-        >``
+          >Featured properties
+        </SectionHeading>
       </div>
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 max-w-[75rem] mx-auto"

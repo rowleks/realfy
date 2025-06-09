@@ -10,6 +10,7 @@
 
 <script setup lang="ts">
 import TitleButton from "../buttons/TitleButton.vue";
+import HomeSvg from "../svg/HomeSvg.vue";
 defineProps(["subTitle"]);
 </script>
 
