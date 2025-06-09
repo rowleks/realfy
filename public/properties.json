@@ -8,7 +8,7 @@
     "bathrooms": 2,
     "area_sqft": 950,
     "garages": 2,
-    "image": "/src/assets/images/property1.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456294/property1_pz4cc2.jpg",
     "description": "A stylish apartment located in the heart of downtown with easy access to amenities.",
     "type": "Sell"
   },
@@ -21,7 +21,7 @@
     "bathrooms": 2,
     "area_sqft": 1400,
     "garages": 2,
-    "image": "/src/assets/images/property2.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456294/property3_vqbwvs.jpg",
     "description": "A comfortable family home in a quiet neighborhood with a spacious backyard.",
     "type": "Sell"
   },
@@ -34,7 +34,7 @@
     "bathrooms": 2,
     "area_sqft": 1200,
     "garages": 1,
-    "image": "/src/assets/images/property3.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456295/property6_mgxps9.jpg",
     "description": "Enjoy breathtaking city views from this high-rise luxury condo.",
     "type": "Sell"
   },
@@ -47,7 +47,7 @@
     "bathrooms": 1,
     "area_sqft": 850,
     "garages": 1,
-    "image": "/src/assets/images/property4.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456295/property4_uebdz5.jpg",
     "description": "A quaint cottage surrounded by nature, perfect for a peaceful retreat.",
     "type": "Rent"
   },
@@ -60,7 +60,7 @@
     "bathrooms": 3,
     "area_sqft": 2000,
     "garages": 3,
-    "image": "/src/assets/images/property5.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456295/property5_rlxdb4.jpg",
     "description": "A large home ideal for families, featuring a modern kitchen and a big garden.",
     "type": "Sell"
   },
@@ -73,7 +73,7 @@
     "bathrooms": 1,
     "area_sqft": 700,
     "garages": 1,
-    "image": "/src/assets/images/property6.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456295/property2_rd8mwo.jpg",
     "description": "A trendy loft with exposed brick and high ceilings in a vibrant urban area.",
     "type": "Rent"
   },
@@ -86,7 +86,7 @@
     "bathrooms": 4,
     "area_sqft": 3500,
     "garages": 3,
-    "image": "/src/assets/images/property7.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456295/property7_ovyhaz.jpg",
     "description": "A luxurious villa with direct beach access and stunning ocean views.",
     "type": "Sell"
   },
@@ -99,7 +99,7 @@
     "bathrooms": 2,
     "area_sqft": 1600,
     "garages": 2,
-    "image": "/src/assets/images/property8.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456296/property9_rapvet.jpg",
     "description": "A beautifully restored townhouse with original features and modern updates.",
     "type": "Rent"
   },
@@ -112,7 +112,7 @@
     "bathrooms": 1,
     "area_sqft": 900,
     "garages": 1,
-    "image": "/src/assets/images/property9.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456296/property8_c5k1ez.jpg",
     "description": "A cozy cabin nestled in the mountains, perfect for outdoor enthusiasts.",
     "type": "Rent"
   },
@@ -125,7 +125,7 @@
     "bathrooms": 3,
     "area_sqft": 2200,
     "garages": 2,
-    "image": "/src/assets/images/property10.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456296/property12_pl9ddd.jpg",
     "description": "An exclusive penthouse with panoramic city views and luxury finishes.",
     "type": "Sell"
   },
@@ -138,7 +138,7 @@
     "bathrooms": 3,
     "area_sqft": 1800,
     "garages": 1,
-    "image": "/src/assets/images/property11.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456296/property10_gneavl.jpg",
     "description": "A sustainable home with solar panels and energy-efficient appliances.",
     "type": "Sell"
   },
@@ -151,7 +151,7 @@
     "bathrooms": 1,
     "area_sqft": 500,
     "garages": 2,
-    "image": "/src/assets/images/property12.jpg",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749456296/property11_vvbsw1.jpg",
     "description": "A compact studio apartment ideal for singles or students, close to public transport.",
     "type": "Rent"
   }

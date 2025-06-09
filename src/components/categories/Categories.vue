@@ -22,23 +22,26 @@
 <script setup lang="ts">
 import SectionHeading from "../headings/SectionHeading.vue";
 import CategoriesCard from "./CategoriesCard.vue";
+import ecofriendlyImg from "@/assets/images/ecofriendly.jpg";
+import commercialImg from "@/assets/images/commercial.jpg";
+import luxuryImg from "@/assets/images/luxury.jpg";
 
 const categories = [
   {
-    image: "/src/assets/images/ecofriendly.jpg",
+    image: luxuryImg,
     title: "Eco-Friendly Homes",
     description:
       "Sustainable living in eco-friendly homes equipped with cutting-edge green technologies.",
   },
   {
-    image: "/src/assets/images/commercial.jpg",
+    image: commercialImg,
     title: "Commercial Properties",
     description:
       "Commercial buildings intended to provide visitors with comfort and convenience.",
   },
   {
-    image: "/src/assets/images/luxury.jpg",
-    title: "Eco-Friendly Homes",
+    image: ecofriendlyImg,
+    title: "Luxury Homes",
     description:
       "Elegant life in opulent mansions and estates equipped with the best conveniences.",
   },
