@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="space-y-8">
+    <div class="space-y-12">
       <div class="text-center space-y-4">
         <SectionHeading section="Recent Properties"
           >Featured properties

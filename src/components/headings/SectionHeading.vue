@@ -1,6 +1,6 @@
 <template>
   <TitleButton>{{ section }}</TitleButton>
-  <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold">
+  <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1]">
     <slot />
   </h2>
 </template>

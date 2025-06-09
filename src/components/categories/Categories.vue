@@ -1,10 +1,10 @@
 <template>
   <section>
-    <div class="space-y-8">
-      <div class="text-center space-y-4">
+    <div class="space-y-12">
+      <div class="text-center space-y-4 max-w-md mx-auto">
         <SectionHeading section="Property Categories"
           >Start your journey to your ideal property</SectionHeading
-        >``
+        >
       </div>
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 max-w-[75rem] mx-auto"
