@@ -6,6 +6,7 @@
   <Categories />
   <ContactSection />
   <MetricsSection />
+  <ProcessSection />
 </template>
 
 <script setup lang="ts">
@@ -16,6 +17,7 @@ import NavBar from "@/components/header/Navbar.vue";
 import HomeHero from "@/components/hero/HomeHero.vue";
 import MiniListing from "@/components/listings/MiniListing.vue";
 import MetricsSection from "@/components/metrics/MetricsSection.vue";
+import ProcessSection from "@/components/process/ProcessSection.vue";
 </script>
 
 <style scoped></style>
