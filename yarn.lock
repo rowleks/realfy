@@ -949,6 +949,11 @@ vue-tsc@^2.2.8:
     "@volar/typescript" "~2.4.11"
     "@vue/language-core" "2.2.10"
 
+vue3-marquee@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/vue3-marquee/-/vue3-marquee-4.2.2.tgz#e5316591e5412931856d5a7e5aa2b34be4388673"
+  integrity sha512-FeFvGUVInKfFilXFcnl8sDRBJBZCZSNLlQDquJErB9db6W2xICRVqbRV/jtdzsEP0rftarLQhx9MeEAU0+TPuQ==
+
 vue@^3.5.13:
   version "3.5.16"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.5.16.tgz#f0cde88c2688354f00ff2d77eb295c26440f8c7a"

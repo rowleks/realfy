@@ -11,7 +11,7 @@
           <ButtonPrimary link="#">Contact Us</ButtonPrimary>
         </div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 flex-[1.5]">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-[1.5]">
         <MetricCard
           v-for="metric in metrics"
           :key="metric.id"

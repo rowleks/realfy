@@ -7,6 +7,7 @@
   <ContactSection />
   <MetricsSection />
   <ProcessSection />
+  <Agents />
 </template>
 
 <script setup lang="ts">
@@ -18,6 +19,7 @@ import HomeHero from "@/components/hero/HomeHero.vue";
 import MiniListing from "@/components/listings/MiniListing.vue";
 import MetricsSection from "@/components/metrics/MetricsSection.vue";
 import ProcessSection from "@/components/process/ProcessSection.vue";
+import Agents from "@/components/agents/Agents.vue";
 </script>
 
 <style scoped></style>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Jessica Thompson",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627395/valerie_yrylno.jpg",
+    "role": "Listing Agent"
+  },
+  {
+    "id": 2,
+    "name": "Michael Chen",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627391/cristela_tq7qwg.jpg",
+    "role": "Buyer's Agent"
+  },
+  {
+    "id": 3,
+    "name": "Samantha Lee",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627392/encarna_edhv8s.jpg",
+    "role": "Rental Agent"
+  },
+  {
+    "id": 4,
+    "name": "David Patel",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627393/maestra_zmxyvw.jpg",
+    "role": "Commercial Agent"
+  },
+  {
+    "id": 5,
+    "name": "Emily Rodriguez",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627391/alday_illbuj.jpg",
+    "role": "Luxury Agent"
+  },
+  {
+    "id": 6,
+    "name": "Brian O'Connor",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627392/denya_j37lgd.jpg",
+    "role": "Listing Agent"
+  },
+  {
+    "id": 7,
+    "name": "Priya Singh",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627391/agustin_lslw2s.jpg",
+    "role": "Buyer's Agent"
+  },
+  {
+    "id": 8,
+    "name": "Carlos Martinez",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627391/bryce_zx1ngj.jpg",
+    "role": "Rental Agent"
+  },
+  {
+    "id": 9,
+    "name": "Samuel Johnson",
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749627394/uziel_jmahld.jpg",
+    "role": "Commercial Agent"
+  }
+]
