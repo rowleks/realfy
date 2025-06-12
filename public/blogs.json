@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of Real Estate Technology",
+    "author": "Jane Smith",
+    "date": "2025-06-01",
+    "summary": "Exploring how technology is transforming the real estate industry.",
+    "content": "From virtual tours to AI-driven analytics, technology is reshaping how we buy and sell homes.",
+    "tags": ["technology", "real estate", "innovation"],
+    "readingTime": 5,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749073/blog12_jhxbdc.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Top 5 Home Staging Tips",
+    "author": "John Doe",
+    "date": "2024-05-28",
+    "summary": "Simple ways to make your home more appealing to buyers.",
+    "content": "Staging your home can increase its value and help it sell faster. Here are five tips to get started.",
+    "tags": ["home staging", "tips", "selling"],
+    "readingTime": 10,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749073/blog1_ftvocz.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Understanding Mortgage Rates in 2024",
+    "author": "Emily Johnson",
+    "date": "2024-05-20",
+    "summary": "A guide to current mortgage rates and what affects them.",
+    "content": "Mortgage rates fluctuate due to various factors. Learn what to expect in 2024.",
+    "tags": ["mortgage", "finance", "real estate"],
+    "readingTime": 15,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749073/blog11_mdl1fl.jpg"
+  },
+  {
+    "id": 4,
+    "title": "How to Choose the Right Neighborhood",
+    "author": "Michael Lee",
+    "date": "2024-05-15",
+    "summary": "Factors to consider when selecting a neighborhood.",
+    "content": "Schools, amenities, and safety are just a few things to keep in mind when choosing where to live.",
+    "tags": ["neighborhood", "buying", "advice"],
+    "readingTime": 5,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749072/blog6_dlcjdf.jpg"
+  },
+  {
+    "id": 5,
+    "title": "The Benefits of Smart Home Devices",
+    "author": "Sarah Kim",
+    "date": "2024-05-10",
+    "summary": "How smart devices can improve your home life.",
+    "content": "Smart thermostats, lights, and security systems offer convenience and efficiency.",
+    "tags": ["smart home", "technology", "gadgets"],
+    "readingTime": 3,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749072/blog9_fa1btu.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Renting vs. Buying: Pros and Cons",
+    "author": "David Brown",
+    "date": "2025-05-05",
+    "summary": "Deciding whether to rent or buy a home.",
+    "content": "Both renting and buying have their advantages. Here’s what to consider before making your decision.",
+    "tags": ["renting", "buying", "real estate"],
+    "readingTime": 7,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749072/blog8_hxzfwl.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Eco-Friendly Home Improvements",
+    "author": "Olivia Green",
+    "date": "2025-04-30",
+    "summary": "Sustainable upgrades for your home.",
+    "content": "From solar panels to energy-efficient appliances, eco-friendly improvements can save money and the planet.",
+    "tags": ["eco-friendly", "home improvement", "sustainability"],
+    "readingTime": 20,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749072/blog7_qpvn4l.jpg"
+  },
+  {
+    "id": 8,
+    "title": "First-Time Homebuyer Mistakes to Avoid",
+    "author": "Chris White",
+    "date": "2025-04-25",
+    "summary": "Common pitfalls for new homebuyers.",
+    "content": "Avoid these mistakes to make your first home purchase a success.",
+    "tags": ["homebuyer", "advice", "real estate"],
+    "readingTime": 15,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749071/blog10_dds5k8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "How to Increase Your Home’s Value",
+    "author": "Anna Black",
+    "date": "2025-04-20",
+    "summary": "Tips for boosting your property’s worth.",
+    "content": "Simple renovations and upgrades can significantly increase your home’s value.",
+    "tags": ["home value", "renovation", "selling"],
+    "readingTime": 5,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749071/blog2_sddkmg.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Real Estate Market Trends in 2025",
+    "author": "Mark Wilson",
+    "date": "2025-04-15",
+    "summary": "What’s happening in the real estate market this year.",
+    "content": "Stay ahead of the curve with the latest trends and predictions for 2025.",
+    "tags": ["market trends", "real estate", "2025"],
+    "readingTime": 10,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749071/blog5_axjpq8.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Guide to Investment Properties",
+    "author": "Sophia Turner",
+    "date": "2025-04-10",
+    "summary": "How to get started with real estate investing.",
+    "content": "Investment properties can be lucrative. Learn the basics before you buy.",
+    "tags": ["investment", "real estate", "guide"],
+    "readingTime": 12,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749071/blog4_d9hor4.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Preparing Your Home for Sale",
+    "author": "James Clark",
+    "date": "2025-04-05",
+    "summary": "Steps to take before listing your home.",
+    "content": "From cleaning to repairs, here’s how to get your home ready for the market.",
+    "tags": ["selling", "preparation", "real estate"],
+    "readingTime": 3,
+    "image": "https://res.cloudinary.com/dxzvbij1p/image/upload/v1749749070/blog3_xl3u9o.jpg"
+  }
+]

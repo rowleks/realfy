@@ -14,11 +14,7 @@
         <h4 class="text-xl">{{ category.title }}</h4>
         <small>{{ category.description }}</small>
       </div>
-      <button
-        class="flex items-center justify-center gap-1 py-[7px] px-4 rounded-md border-1 border-[#efefef] cursor-pointer"
-      >
-        Explore Now
-      </button>
+      <button class="btn-tertiary">Explore Now</button>
     </div>
   </div>
 </template>

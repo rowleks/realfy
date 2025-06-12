@@ -25,13 +25,13 @@
     </div>
     <div class="space-y-4">
       <div>
-        <h4>{{ listing.title }}</h4>
+        <h4 class="text-xl md:text-2xl">{{ listing.title }}</h4>
         <div class="flex items-center gap-1">
           <LocationSvg class="inline-block size-[18px]" />
           <small>{{ listing.address }}</small>
         </div>
       </div>
-      <div class="flex items-center gap-1">
+      <div class="flex items-center gap-1 text-sm">
         <div
           class="flex items-center gap-1 py-[7px] px-4 rounded-md border-1 border-[#efefef]"
         >
@@ -39,19 +39,19 @@
           <span>{{ listing.area_sqft }} sqft</span>
         </div>
         <div
-          class="flex items-center gap-1 py-[7px] px-4 rounded-md border-1 border-[#efefef]"
+          class="flex items-center gap-1 py-[7px] px-3 rounded-md border-1 border-[#efefef]"
         >
           <BedSvg class="inline-block size-[18px]" />
           <span>{{ listing.bedrooms }}</span>
         </div>
         <div
-          class="flex items-center gap-1 py-[7px] px-4 rounded-md border-1 border-[#efefef]"
+          class="flex items-center gap-1 py-[7px] px-3 rounded-md border-1 border-[#efefef]"
         >
           <ShowerSvg class="inline-block size-[18px]" />
           <span>{{ listing.bathrooms }}</span>
         </div>
         <div
-          class="flex items-center gap-1 py-[7px] px-4 rounded-md border-1 border-[#efefef]"
+          class="flex items-center gap-1 py-[7px] px-3 rounded-md border-1 border-[#efefef]"
         >
           <CarSvg class="inline-block size-[18px]" />
           <span>{{ listing.garages }}</span>
