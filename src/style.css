@@ -38,6 +38,10 @@
   .btn-secondary {
     @apply bg-[#f7f7f7] border-2 border-[#e8e8e8] rounded-4xl uppercase inline-flex items-center justify-center px-4 py-2 font-medium text-xs md:text-base;
   }
+
+  .arrow-container {
+    @apply size-12 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-black hover:text-white transition-colors border-1 border-[#ccc] text-[#b3b3b3];
+  }
 }
 
 @layer utilities {

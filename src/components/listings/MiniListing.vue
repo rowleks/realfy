@@ -7,7 +7,7 @@
         </SectionHeading>
       </div>
       <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-10 px-5 max-w-[75rem] mx-auto"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 max-w-[75rem] mx-auto"
       >
         <template v-for="listing in miniList" :key="listing.id">
           <a href="#" class="group">

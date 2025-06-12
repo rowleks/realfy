@@ -8,6 +8,7 @@
   <MetricsSection />
   <ProcessSection />
   <Agents />
+  <Testimonials />
 </template>
 
 <script setup lang="ts">
@@ -20,6 +21,7 @@ import MiniListing from "@/components/listings/MiniListing.vue";
 import MetricsSection from "@/components/metrics/MetricsSection.vue";
 import ProcessSection from "@/components/process/ProcessSection.vue";
 import Agents from "@/components/agents/Agents.vue";
+import Testimonials from "@/components/testimonials/Testimonials.vue";
 </script>
 
 <style scoped></style>
