@@ -1,5 +1,5 @@
 <template>
-  <TitleButton>{{ section }}</TitleButton>
+  <TitleButton :class="[$attrs.class]">{{ section }}</TitleButton>
   <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.1]">
     <slot />
   </h2>

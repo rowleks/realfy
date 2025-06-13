@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-xl">
+  <div class="max-w-2xl">
     <div
       v-for="(faq, idx) in faqs"
       :key="idx"
