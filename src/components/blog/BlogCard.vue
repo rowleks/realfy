@@ -21,7 +21,7 @@
             <DateSvg />
             <small>{{ formatDate(blog.date) }}</small>
           </span>
-          <span class="flex items-center gap-1.5">
+          <span class="flex items-center gap-1.5 text-gray-600">
             <ClockSvg />
             <small>{{ blog.readingTime }} min read</small>
           </span>

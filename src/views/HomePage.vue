@@ -10,6 +10,7 @@
   <Agents />
   <Testimonials />
   <MiniBlogList />
+  <FaqSection />
 </template>
 
 <script setup lang="ts">
@@ -24,6 +25,7 @@ import ProcessSection from "@/components/process/ProcessSection.vue";
 import Agents from "@/components/agents/Agents.vue";
 import Testimonials from "@/components/testimonials/Testimonials.vue";
 import MiniBlogList from "@/components/blog/MiniBlogList.vue";
+import FaqSection from "@/components/faq/FaqSection.vue";
 </script>
 
 <style scoped></style>
