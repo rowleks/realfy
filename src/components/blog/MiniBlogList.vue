@@ -48,7 +48,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../headings/SectionHeading.vue";
 import ButtonPrimary from "../buttons/ButtonPrimary.vue";
 import BlogCard from "./BlogCard.vue";
-import { fetchBlogs, Blog } from "../../utils/fetchBlogs";
+import { fetchBlogs, Blog } from "../../utils/data/fetchBlogs";
 
 gsap.registerPlugin(ScrollTrigger);
 

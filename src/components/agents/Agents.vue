@@ -28,7 +28,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../headings/SectionHeading.vue";
 import AgentCard from "./AgentCard.vue";
 import { Vue3Marquee } from "vue3-marquee";
-import { fetchAllAgents, type Agent } from "@/utils/fetchAgents";
+import { fetchAllAgents, type Agent } from "@/utils/data/fetchAgents";
 
 gsap.registerPlugin(ScrollTrigger);
 

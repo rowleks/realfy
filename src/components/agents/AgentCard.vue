@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Agent } from "@/utils/fetchAgents";
+import type { Agent } from "@/utils/data/fetchAgents";
 defineProps<{ agent: Agent }>();
 </script>
 
