@@ -1,10 +1,12 @@
 <template>
   <section>
     <div class="space-y-12">
-      <div class="text-center space-y-4 max-w-md mx-auto">
-        <SectionHeading section="Testimonials">
-          Real stories from happy homeowners
-        </SectionHeading>
+      <div ref="headingRef">
+        <div class="text-center space-y-4 max-w-md mx-auto">
+          <SectionHeading section="Testimonials">
+            Real stories from happy homeowners
+          </SectionHeading>
+        </div>
       </div>
       <swiper-container
         :slides-per-view="1"
@@ -39,6 +41,9 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { register } from "swiper/element/bundle";
 import SectionHeading from "../headings/SectionHeading.vue";
 import TestimonialCard from "./TestimonialCard.vue";
@@ -47,6 +52,11 @@ import NextButton from "../buttons/NextButton.vue";
 import avatar1 from "../../assets/images/test1.jpeg";
 import avatar2 from "../../assets/images/test2.png";
 import avatar3 from "../../assets/images/test3.jpg";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const headingRef = ref<HTMLElement | null>(null);
+let headingAnimation: gsap.core.Tween | null = null;
 
 // Register Swiper custom elements
 register();
@@ -80,6 +90,46 @@ const testimonies = [
     avatar: avatar3,
   },
 ];
+
+onMounted(() => {
+  // Heading animation
+  if (headingRef.value) {
+    headingAnimation = gsap.fromTo(
+      headingRef.value,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: headingRef.value,
+          start: "top 95%",
+          toggleActions: "restart none none none",
+          id: "testimonials-heading",
+        },
+      }
+    );
+  }
+});
+
+onUnmounted(() => {
+  // Kill animations
+  if (headingAnimation) {
+    headingAnimation.kill();
+    headingAnimation = null;
+  }
+
+  // Kill ScrollTriggers
+  ScrollTrigger.getAll().forEach((trigger) => {
+    if (trigger.vars.id === "testimonials-heading") {
+      trigger.kill();
+    }
+  });
+});
 </script>
 
 <style scoped></style>

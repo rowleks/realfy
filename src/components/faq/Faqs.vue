@@ -1,9 +1,14 @@
 <template>
-  <div class="max-w-2xl">
+  <div class="max-w-2xl" ref="faqsRef">
     <div
       v-for="(faq, idx) in faqs"
       :key="idx"
       class="mb-4 border-b border-[#e8e8e8] pb-4"
+      :ref="
+        (el) => {
+          if (el) faqRefs[idx] = el;
+        }
+      "
     >
       <button
         class="bg-none border-none font-medium text-xl cursor-pointer w-full text-left py-2"
@@ -24,12 +29,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface Faq {
   question: string;
   answer: string;
 }
+
+const faqsRef = ref<HTMLElement | null>(null);
+const faqRefs = ref<any[]>([]);
+let faqsAnimation: gsap.core.Tween | null = null;
 
 const faqs = ref<Faq[]>([
   {
@@ -64,6 +77,46 @@ const openFaqs = ref<boolean[]>(Array(faqs.value.length).fill(false));
 function toggle(idx: number) {
   openFaqs.value[idx] = !openFaqs.value[idx];
 }
+
+onMounted(() => {
+  // Initialize FAQ animations
+  if (faqsRef.value && faqRefs.value.length > 0) {
+    faqsAnimation = gsap.fromTo(
+      faqRefs.value,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: faqsRef.value,
+          start: "top 95%",
+          toggleActions: "restart none none none",
+          id: "faqs-items",
+        },
+      }
+    );
+  }
+});
+
+onUnmounted(() => {
+  // Kill animations
+  if (faqsAnimation) {
+    faqsAnimation.kill();
+    faqsAnimation = null;
+  }
+
+  // Kill ScrollTriggers
+  ScrollTrigger.getAll().forEach((trigger) => {
+    if (trigger.vars.id === "faqs-items") {
+      trigger.kill();
+    }
+  });
+});
 </script>
 
 <style scoped>
