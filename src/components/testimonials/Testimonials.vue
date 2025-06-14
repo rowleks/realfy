@@ -48,6 +48,7 @@ import avatar1 from "../../assets/images/test1.jpeg";
 import avatar2 from "../../assets/images/test2.png";
 import avatar3 from "../../assets/images/test3.jpg";
 
+// Register Swiper custom elements
 register();
 
 const testimonies = [
