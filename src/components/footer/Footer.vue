@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-black text-white pb-10">
+  <footer class="bg-black text-white pb-10 py-10 md:py-20">
     <div class="max-w-[75rem] mx-auto px-5 space-y-10">
       <div class="flex flex-col md:flex-row gap-8 lg:gap-10">
         <div class="flex-1">
@@ -52,7 +52,7 @@
         <small>&copy;2025 All rights reserved.</small>
       </div>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script setup lang="ts">
