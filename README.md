@@ -7,7 +7,7 @@ A modern real estate platform built with Vue 3, TypeScript, and Vite.
 - Modern UI with Tailwind CSS
 - Responsive design
 - Interactive components with Swiper
-- Smooth animations with Vue3 Marquee
+- Smooth animations with Vue3 Marquee and GSAP
 - Type-safe development with TypeScript
 
 ## 🛠️ Tech Stack
@@ -19,6 +19,9 @@ A modern real estate platform built with Vue 3, TypeScript, and Vite.
 - **UI Components:**
   - Swiper for testimonials
   - Vue3 Marquee for agents
+- **Animations:**
+  - GSAP for scroll-triggered animations
+  - Vue3 Marquee for continuous animations
 - **Development Tools:**
   - TypeScript for type safety
   - Vue TSConfig for Vue-specific TypeScript configuration
@@ -53,12 +56,51 @@ realfy/
 │   ├── components/  # Reusable Vue components
 │   ├── layouts/     # Layout components
 │   ├── utils/       # Utility functions
+│   │   ├── animations/  # GSAP animation utilities
+│   │   │   ├── base.ts  # Base animation utilities
+│   │   │   └── [component].ts  # Component-specific animations
+│   │   └── data/    # Data fetching utilities
 │   ├── views/       # Page components
 │   ├── App.vue      # Root component
 │   └── main.ts      # Application entry point
 ├── public/          # Public static files
 └── ...config files
 ```
+
+## 🎨 Animation System
+
+The project uses GSAP (GreenSock Animation Platform) for creating smooth, scroll-triggered animations. The animation system is modular and organized as follows:
+
+### Base Animation Utilities (`base.ts`)
+
+- Common animation functions and types
+- ScrollTrigger configuration
+- Animation creation helpers
+- Cleanup utilities
+
+### Component-Specific Animations
+
+Each component has its own animation file in the `utils/animations` folder:
+
+- `miniListing.ts` - Property listings animations
+- `miniAbout.ts` - About section animations
+- `miniBlogList.ts` - Blog section animations
+- `categories.ts` - Property categories animations
+- `contactSection.ts` - Contact section animations
+- `metricsSection.ts` - Metrics section animations
+- `processSection.ts` - Process section animations
+- `agents.ts` - Agents section animations
+- `testimonials.ts` - Testimonials section animations
+- `faqSection.ts` - FAQ section animations
+
+### Animation Features
+
+- Scroll-triggered animations
+- Staggered animations for lists and grids
+- Fade and slide effects
+- Scale transformations
+- Responsive animation triggers
+- Proper cleanup on component unmount
 
 ## 📸 Screenshots
 
@@ -114,21 +156,6 @@ I'd love your input! I want to make contributing to Realfy as easy and transpare
 - Submitting a fix
 - Proposing new features
 - Becoming a maintainer
-
-### I Develop with GitHub
-
-I use GitHub to host code, to track issues and feature requests, as I'll as accept pull requests.
-
-### I Use [Github Flow](https://guides.github.com/introduction/flow/index.html)
-
-Pull requests are the best way to propose changes to the codebase. I actively welcome your pull requests:
-
-1. Fork the repo and create your branch from `main`.
-2. If you've added code that should be tested, add tests.
-3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes.
-5. Make sure your code lints.
-6. Issue that pull request!
 
 ### Any contributions you make will be under the MIT Software License
 
