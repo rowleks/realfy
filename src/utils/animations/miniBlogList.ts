@@ -4,6 +4,7 @@ import {
   createScrollTrigger,
   killAnimation,
   killScrollTrigger,
+  getStartPosition,
 } from "./base";
 
 export const initMiniBlogListAnimations = (
@@ -38,6 +39,7 @@ export const initMiniBlogListAnimations = (
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "blogs-button",
     })
   );

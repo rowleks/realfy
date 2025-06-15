@@ -34,147 +34,39 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ButtonPrimary from "../buttons/ButtonPrimary.vue";
 import SectionHeading from "../headings/SectionHeading.vue";
-
-gsap.registerPlugin(ScrollTrigger);
+import {
+  initContactSectionAnimations,
+  cleanupContactSectionAnimations,
+} from "@/utils/animations/contactSection";
 
 const headingRef = ref<HTMLElement | null>(null);
 const contentRef = ref<HTMLElement | null>(null);
 const textRef = ref<HTMLElement | null>(null);
 const buttonRef = ref<HTMLElement | null>(null);
 const imageRef = ref<HTMLElement | null>(null);
-let headingAnimation: gsap.core.Tween | null = null;
-let textAnimation: gsap.core.Tween | null = null;
-let buttonAnimation: gsap.core.Tween | null = null;
-let imageAnimation: gsap.core.Tween | null = null;
+
+let animations: {
+  headingAnimation: gsap.core.Tween | null;
+  textAnimation: gsap.core.Tween | null;
+  buttonAnimation: gsap.core.Tween | null;
+  imageAnimation: gsap.core.Tween | null;
+} | null = null;
 
 onMounted(() => {
-  // Heading animation
-  if (headingRef.value) {
-    headingAnimation = gsap.fromTo(
-      headingRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: headingRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "contact-heading",
-        },
-      }
-    );
-  }
-
-  // Text animation
-  if (textRef.value) {
-    textAnimation = gsap.fromTo(
-      textRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.5,
-        scrollTrigger: {
-          trigger: contentRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "contact-text",
-        },
-      }
-    );
-  }
-
-  // Button animation
-  if (buttonRef.value) {
-    buttonAnimation = gsap.fromTo(
-      buttonRef.value,
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        delay: 0.8,
-        scrollTrigger: {
-          trigger: contentRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "contact-button",
-        },
-      }
-    );
-  }
-
-  // Image animation
-  if (imageRef.value) {
-    imageAnimation = gsap.fromTo(
-      imageRef.value,
-      {
-        opacity: 0,
-        scale: 0.9,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 1.2,
-        delay: 0.5,
-        scrollTrigger: {
-          trigger: imageRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "contact-image",
-        },
-      }
-    );
-  }
+  animations = initContactSectionAnimations(
+    headingRef.value,
+    textRef.value,
+    buttonRef.value,
+    imageRef.value,
+    contentRef.value
+  );
 });
 
 onUnmounted(() => {
-  // Kill animations
-  if (headingAnimation) {
-    headingAnimation.kill();
-    headingAnimation = null;
-  }
-  if (textAnimation) {
-    textAnimation.kill();
-    textAnimation = null;
-  }
-  if (buttonAnimation) {
-    buttonAnimation.kill();
-    buttonAnimation = null;
-  }
-  if (imageAnimation) {
-    imageAnimation.kill();
-    imageAnimation = null;
-  }
-
-  // Kill ScrollTriggers
-  ScrollTrigger.getAll().forEach((trigger) => {
-    if (
-      trigger.vars.id === "contact-heading" ||
-      trigger.vars.id === "contact-text" ||
-      trigger.vars.id === "contact-button" ||
-      trigger.vars.id === "contact-image"
-    ) {
-      trigger.kill();
-    }
-  });
+  cleanupContactSectionAnimations();
+  animations = null;
 });
 </script>
 

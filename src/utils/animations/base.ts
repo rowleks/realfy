@@ -5,10 +5,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 export interface AnimationConfig {
   trigger: HTMLElement | null;
-  start?: string;
+  start?: string | (() => string);
   end?: string;
   toggleActions?: string;
   id?: string;
+  markers?: boolean;
 }
 
 export interface AnimationProps {
@@ -27,6 +28,7 @@ export const createScrollTrigger = (config: AnimationConfig) => {
     end: config.end,
     toggleActions: config.toggleActions || "restart none none none",
     id: config.id,
+    markers: config.markers || false,
   };
 };
 
@@ -56,6 +58,12 @@ export const createStaggeredAnimation = (
     ...to,
     scrollTrigger,
   });
+};
+
+export const getStartPosition = () => {
+  const isMobile = window.innerWidth <= 768;
+  const percent = isMobile ? 85 : 95;
+  return `top ${percent}%`;
 };
 
 export const killAnimation = (animation: gsap.core.Tween | null) => {

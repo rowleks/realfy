@@ -4,6 +4,7 @@ import {
   createScrollTrigger,
   killAnimation,
   killScrollTrigger,
+  getStartPosition,
 } from "./base";
 
 export const initCategoriesAnimations = (
@@ -22,6 +23,7 @@ export const initCategoriesAnimations = (
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "categories-heading",
     })
   );

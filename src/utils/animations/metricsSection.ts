@@ -4,6 +4,7 @@ import {
   createScrollTrigger,
   killAnimation,
   killScrollTrigger,
+  getStartPosition,
 } from "./base";
 
 export const initMetricsSectionAnimations = (
@@ -23,6 +24,7 @@ export const initMetricsSectionAnimations = (
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "metrics-heading",
     })
   );

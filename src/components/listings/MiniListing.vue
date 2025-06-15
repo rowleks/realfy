@@ -76,6 +76,8 @@ onMounted(async () => {
 
 onUnmounted(() => {
   cleanupMiniListingAnimations();
+  animations = null;
+  cardRefs.value = [];
 });
 
 const miniList = computed(() => {

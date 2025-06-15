@@ -36,6 +36,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ButtonPrimary from "../buttons/ButtonPrimary.vue";
 import SectionHeading from "../headings/SectionHeading.vue";
+import {
+  initMiniAboutAnimations,
+  cleanupMiniAboutAnimations,
+} from "@/utils/animations/miniAbout";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,83 +51,17 @@ const imageRef = ref<HTMLElement | null>(null);
 let tl: gsap.core.Timeline | null = null;
 
 onMounted(() => {
-  tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: headingRef.value,
-      start: "top 95%",
-      end: "+=300",
-      id: "about",
-      toggleActions: "restart none none none",
-    },
-  });
-
-  // Add animations to timeline
-  tl.fromTo(
+  tl = initMiniAboutAnimations(
     headingRef.value,
-    {
-      opacity: 0,
-      y: 30,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1.2,
-    }
-  )
-    .fromTo(
-      textRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-      },
-      "-=0.7"
-    )
-    .fromTo(
-      buttonRef.value,
-      {
-        opacity: 0,
-        y: 20,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-      },
-      "-=0.7"
-    )
-    .fromTo(
-      imageRef.value,
-      {
-        opacity: 0,
-        scale: 0.9,
-      },
-      {
-        opacity: 1,
-        scale: 1,
-        delay: 0.5,
-        duration: 1.2,
-      }
-    );
+    textRef.value,
+    buttonRef.value,
+    imageRef.value
+  );
 });
 
 onUnmounted(() => {
-  // Kill the timeline and its ScrollTrigger
-  if (tl) {
-    tl.kill();
-    tl = null;
-  }
-
-  // Kill all ScrollTriggers with the "about" id
-  ScrollTrigger.getAll().forEach((trigger) => {
-    if (trigger.vars.id === "about") {
-      trigger.kill();
-    }
-  });
+  cleanupMiniAboutAnimations(tl);
+  tl = null;
 });
 </script>
 

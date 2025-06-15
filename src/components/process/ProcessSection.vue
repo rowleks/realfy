@@ -46,18 +46,20 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../headings/SectionHeading.vue";
 import StepCard from "./StepCard.vue";
 import step1Img from "@/assets/images/step1.jpg";
 import step2Img from "@/assets/images/step2.jpg";
 import step3Img from "@/assets/images/step3.jpg";
-
-gsap.registerPlugin(ScrollTrigger);
+import {
+  initProcessSectionAnimations,
+  cleanupProcessSectionAnimations,
+} from "@/utils/animations/processSection";
 
 const headingRef = ref<HTMLElement | null>(null);
-let headingAnimation: gsap.core.Tween | null = null;
+let animations: {
+  headingAnimation: gsap.core.Tween | null;
+} | null = null;
 
 const currentStepId = ref(1);
 const currentStepImage = ref(step1Img);
@@ -96,43 +98,12 @@ const handleVisibilityChange = (stepId: number, isVisible: boolean) => {
 };
 
 onMounted(() => {
-  // Heading animation
-  if (headingRef.value) {
-    headingAnimation = gsap.fromTo(
-      headingRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: headingRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "process-heading",
-        },
-      }
-    );
-  }
+  animations = initProcessSectionAnimations(headingRef.value);
 });
 
 onUnmounted(() => {
-  // Kill animations
-  if (headingAnimation) {
-    headingAnimation.kill();
-    headingAnimation = null;
-  }
-
-  // Kill ScrollTriggers
-  ScrollTrigger.getAll().forEach((trigger) => {
-    if (trigger.vars.id === "process-heading") {
-      trigger.kill();
-    }
-  });
+  cleanupProcessSectionAnimations();
+  animations = null;
 });
 </script>
 

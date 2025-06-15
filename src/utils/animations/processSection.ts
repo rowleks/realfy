@@ -1,6 +1,7 @@
 import {
   createAnimation,
   createScrollTrigger,
+  getStartPosition,
   killAnimation,
   killScrollTrigger,
 } from "./base";
@@ -19,6 +20,7 @@ export const initProcessSectionAnimations = (
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "process-heading",
     })
   );

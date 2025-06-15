@@ -42,8 +42,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { register } from "swiper/element/bundle";
 import SectionHeading from "../headings/SectionHeading.vue";
 import TestimonialCard from "./TestimonialCard.vue";
@@ -52,11 +50,15 @@ import NextButton from "../buttons/NextButton.vue";
 import avatar1 from "../../assets/images/test1.jpeg";
 import avatar2 from "../../assets/images/test2.png";
 import avatar3 from "../../assets/images/test3.jpg";
-
-gsap.registerPlugin(ScrollTrigger);
+import {
+  initTestimonialsAnimations,
+  cleanupTestimonialsAnimations,
+} from "@/utils/animations/testimonials";
 
 const headingRef = ref<HTMLElement | null>(null);
-let headingAnimation: gsap.core.Tween | null = null;
+let animations: {
+  headingAnimation: gsap.core.Tween | null;
+} | null = null;
 
 // Register Swiper custom elements
 register();
@@ -92,43 +94,12 @@ const testimonies = [
 ];
 
 onMounted(() => {
-  // Heading animation
-  if (headingRef.value) {
-    headingAnimation = gsap.fromTo(
-      headingRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: headingRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "testimonials-heading",
-        },
-      }
-    );
-  }
+  animations = initTestimonialsAnimations(headingRef.value);
 });
 
 onUnmounted(() => {
-  // Kill animations
-  if (headingAnimation) {
-    headingAnimation.kill();
-    headingAnimation = null;
-  }
-
-  // Kill ScrollTriggers
-  ScrollTrigger.getAll().forEach((trigger) => {
-    if (trigger.vars.id === "testimonials-heading") {
-      trigger.kill();
-    }
-  });
+  cleanupTestimonialsAnimations();
+  animations = null;
 });
 </script>
 

@@ -23,60 +23,30 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../headings/SectionHeading.vue";
 import AgentCard from "./AgentCard.vue";
 import { Vue3Marquee } from "vue3-marquee";
 import { fetchAllAgents, type Agent } from "@/utils/data/fetchAgents";
-
-gsap.registerPlugin(ScrollTrigger);
+import {
+  initAgentsAnimations,
+  cleanupAgentsAnimations,
+} from "@/utils/animations/agents";
 
 const headingRef = ref<HTMLElement | null>(null);
-let headingAnimation: gsap.core.Tween | null = null;
-
 const agents = ref<Agent[]>([]);
+
+let animations: {
+  headingAnimation: gsap.core.Tween | null;
+} | null = null;
 
 onMounted(async () => {
   agents.value = await fetchAllAgents();
-
-  // Heading animation
-  if (headingRef.value) {
-    headingAnimation = gsap.fromTo(
-      headingRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: headingRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "agents-heading",
-        },
-      }
-    );
-  }
+  animations = initAgentsAnimations(headingRef.value);
 });
 
 onUnmounted(() => {
-  // Kill animations
-  if (headingAnimation) {
-    headingAnimation.kill();
-    headingAnimation = null;
-  }
-
-  // Kill ScrollTriggers
-  ScrollTrigger.getAll().forEach((trigger) => {
-    if (trigger.vars.id === "agents-heading") {
-      trigger.kill();
-    }
-  });
+  cleanupAgentsAnimations();
+  animations = null;
 });
 </script>
 

@@ -1,6 +1,7 @@
 import {
   createAnimation,
   createScrollTrigger,
+  getStartPosition,
   killAnimation,
   killScrollTrigger,
 } from "./base";
@@ -17,6 +18,7 @@ export const initAgentsAnimations = (headingRef: HTMLElement | null) => {
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "agents-heading",
     })
   );

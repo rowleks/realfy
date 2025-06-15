@@ -1,9 +1,8 @@
 import { gsap } from "gsap";
 import {
-  createAnimation,
   createScrollTrigger,
-  killAnimation,
   killScrollTrigger,
+  getStartPosition,
 } from "./base";
 
 export const initMiniAboutAnimations = (
@@ -15,6 +14,7 @@ export const initMiniAboutAnimations = (
   const tl = gsap.timeline({
     scrollTrigger: createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "about",
     }),
   });
@@ -25,7 +25,7 @@ export const initMiniAboutAnimations = (
     {
       opacity: 1,
       y: 0,
-      duration: 1.2,
+      duration: 1.5,
     }
   )
     .fromTo(

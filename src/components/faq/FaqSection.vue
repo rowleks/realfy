@@ -19,54 +19,26 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionHeading from "../headings/SectionHeading.vue";
 import Faqs from "./Faqs.vue";
-
-gsap.registerPlugin(ScrollTrigger);
+import {
+  initFaqSectionAnimations,
+  cleanupFaqSectionAnimations,
+} from "@/utils/animations/faqSection";
 
 const headingRef = ref<HTMLElement | null>(null);
-let headingAnimation: gsap.core.Tween | null = null;
+
+let animations: {
+  headingAnimation: gsap.core.Tween | null;
+} | null = null;
 
 onMounted(() => {
-  // Heading animation
-  if (headingRef.value) {
-    headingAnimation = gsap.fromTo(
-      headingRef.value,
-      {
-        opacity: 0,
-        y: 30,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: headingRef.value,
-          start: "top 95%",
-          toggleActions: "restart none none none",
-          id: "faq-section-heading",
-        },
-      }
-    );
-  }
+  animations = initFaqSectionAnimations(headingRef.value);
 });
 
 onUnmounted(() => {
-  // Kill animations
-  if (headingAnimation) {
-    headingAnimation.kill();
-    headingAnimation = null;
-  }
-
-  // Kill ScrollTriggers
-  ScrollTrigger.getAll().forEach((trigger) => {
-    if (trigger.vars.id === "faq-section-heading") {
-      trigger.kill();
-    }
-  });
+  cleanupFaqSectionAnimations();
+  animations = null;
 });
 </script>
 

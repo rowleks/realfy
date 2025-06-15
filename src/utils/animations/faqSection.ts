@@ -4,6 +4,7 @@ import {
   createScrollTrigger,
   killAnimation,
   killScrollTrigger,
+  getStartPosition,
 } from "./base";
 
 export const initFaqSectionAnimations = (headingRef: HTMLElement | null) => {
@@ -18,6 +19,7 @@ export const initFaqSectionAnimations = (headingRef: HTMLElement | null) => {
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "faq-section-heading",
     })
   );

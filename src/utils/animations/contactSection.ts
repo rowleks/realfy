@@ -1,6 +1,7 @@
 import {
   createAnimation,
   createScrollTrigger,
+  getStartPosition,
   killAnimation,
   killScrollTrigger,
 } from "./base";
@@ -23,6 +24,7 @@ export const initContactSectionAnimations = (
     },
     createScrollTrigger({
       trigger: headingRef,
+      start: getStartPosition,
       id: "contact-heading",
     })
   );

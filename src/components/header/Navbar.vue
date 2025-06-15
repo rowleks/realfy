@@ -33,7 +33,7 @@
     <transition name="slide-fade">
       <div
         v-if="isMobileMenuOpen"
-        class="absolute top-full left-0 bg-white p-5 border-t-1 border-[#0c0407] w-full"
+        class="absolute top-full left-0 bg-white p-5 border-t-1 border-[#0c0407] w-full z-10"
       >
         <MobileNavLinks />
       </div>
