@@ -64,6 +64,7 @@ let animations: {
   textAnimation: gsap.core.Tween | null;
   buttonAnimation: gsap.core.Tween | null;
   imageAnimation: gsap.core.Tween | null;
+  listAnimation?: gsap.core.Tween | null; // Add this line
 } | null = null;
 
 onMounted(async () => {
@@ -82,7 +83,7 @@ onMounted(async () => {
 });
 
 onUnmounted(() => {
-  cleanupContactSectionAnimations();
+  cleanupContactSectionAnimations(animations ?? undefined);
   animations = null;
 });
 </script>

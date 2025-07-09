@@ -11,7 +11,8 @@ export const initMetricsSectionAnimations = (
   headingRef: HTMLElement | null,
   buttonRef: HTMLElement | null,
   metricsRef: HTMLElement | null,
-  cardRefs: HTMLElement[]
+  cardRefs: HTMLElement[],
+  listRefs?: HTMLElement[]
 ) => {
   const headingAnimation = createAnimation(
     headingRef,
@@ -60,18 +61,44 @@ export const initMetricsSectionAnimations = (
     })
   );
 
+  const listAnimation = createStaggeredAnimation(
+    listRefs || [],
+    { opacity: 0, y: 20 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      delay: 0.8,
+    },
+    createScrollTrigger({
+      trigger: headingRef,
+      id: "metrics-list",
+    })
+  );
+
   return {
     headingAnimation,
     buttonAnimation,
     metricsAnimation,
+    listAnimation,
   };
 };
 
-export const cleanupMetricsSectionAnimations = () => {
-  killAnimation(null); // Kill heading animation
-  killAnimation(null); // Kill button animation
-  killAnimation(null); // Kill metrics animation
+export const cleanupMetricsSectionAnimations = (
+  animations: {
+    headingAnimation?: gsap.core.Tween | null;
+    buttonAnimation?: gsap.core.Tween | null;
+    metricsAnimation?: gsap.core.Tween | null;
+    listAnimation?: gsap.core.Tween | null;
+  } = {}
+) => {
+  killAnimation(animations?.headingAnimation ?? null);
+  killAnimation(animations?.buttonAnimation ?? null);
+  killAnimation(animations?.metricsAnimation ?? null);
+  killAnimation(animations?.listAnimation ?? null);
   killScrollTrigger("metrics-heading");
   killScrollTrigger("metrics-button");
   killScrollTrigger("metrics-cards");
+  killScrollTrigger("metrics-list");
 };

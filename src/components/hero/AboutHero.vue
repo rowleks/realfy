@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <div class="space-y-4 text-center wrapper">
+      <div class="space-y-4 text-center wrapper px-4">
         <div ref="headingRef">
           <PageHeading subTitle="Who we are">ABOUT US</PageHeading>
         </div>

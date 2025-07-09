@@ -101,13 +101,23 @@ export const initContactSectionAnimations = (
   };
 };
 
-export const cleanupContactSectionAnimations = () => {
-  killAnimation(null); // Kill heading animation
-  killAnimation(null); // Kill text animation
-  killAnimation(null); // Kill button animation
-  killAnimation(null); // Kill image animation
+export const cleanupContactSectionAnimations = (
+  animations: {
+    headingAnimation?: gsap.core.Tween | null;
+    textAnimation?: gsap.core.Tween | null;
+    buttonAnimation?: gsap.core.Tween | null;
+    imageAnimation?: gsap.core.Tween | null;
+    listAnimation?: gsap.core.Tween | null;
+  } = {}
+) => {
+  killAnimation(animations?.headingAnimation ?? null);
+  killAnimation(animations?.textAnimation ?? null);
+  killAnimation(animations?.buttonAnimation ?? null);
+  killAnimation(animations?.imageAnimation ?? null);
+  killAnimation(animations?.listAnimation ?? null);
   killScrollTrigger("contact-heading");
   killScrollTrigger("contact-text");
   killScrollTrigger("contact-button");
   killScrollTrigger("contact-image");
+  killScrollTrigger("contact-list");
 };
