@@ -78,7 +78,7 @@ const metrics = [
   },
   {
     id: 4,
-    value: "900+",
+    value: "900k+",
     label: "Followers",
     description:
       "Explore the numbers behind our real estate success, showcasing the trust clients place in us and the results we consistently deliver.",
