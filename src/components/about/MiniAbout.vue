@@ -15,7 +15,7 @@
             beach safe neighborhoods, and nearby schools access.
           </p>
           <div ref="buttonRef">
-            <ButtonPrimary link="#">Read More</ButtonPrimary>
+            <ButtonPrimary link="/about">Read More</ButtonPrimary>
           </div>
         </div>
       </div>

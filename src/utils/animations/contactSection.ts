@@ -1,6 +1,7 @@
 import {
   createAnimation,
   createScrollTrigger,
+  createStaggeredAnimation,
   getStartPosition,
   killAnimation,
   killScrollTrigger,
@@ -11,7 +12,8 @@ export const initContactSectionAnimations = (
   textRef: HTMLElement | null,
   buttonRef: HTMLElement | null,
   imageRef: HTMLElement | null,
-  contentRef: HTMLElement | null
+  contentRef: HTMLElement | null,
+  listRef?: HTMLElement[] | null
 ) => {
   const headingAnimation = createAnimation(
     headingRef,
@@ -74,11 +76,28 @@ export const initContactSectionAnimations = (
     })
   );
 
+  const listAnimation = createStaggeredAnimation(
+    listRef || [],
+    { opacity: 0, y: 20 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.3,
+      delay: 1.2,
+    },
+    createScrollTrigger({
+      trigger: contentRef,
+      id: "contact-list",
+    })
+  );
+
   return {
     headingAnimation,
     textAnimation,
     buttonAnimation,
     imageAnimation,
+    listAnimation,
   };
 };
 
