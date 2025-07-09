@@ -22,7 +22,7 @@
   }
 
   h1.title-heading {
-    @apply font-semibold text-5xl md:text-7xl lg:text-8xl xl:text-[12rem] leading-[1.1] -tracking-[3px];
+    @apply font-semibold uppercase text-5xl md:text-7xl lg:text-8xl xl:text-[12rem] leading-[1.1] -tracking-[3px];
   }
 }
 
