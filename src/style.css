@@ -46,6 +46,10 @@
   .arrow-container {
     @apply size-12 flex items-center justify-center rounded-full bg-white shadow-md hover:bg-black hover:text-white transition-colors border-1 border-[#ccc] text-[#b3b3b3];
   }
+
+  .info-card {
+    @apply space-y-8 p-5 rounded-xl md:rounded-3xl text-[#333] md:py-7 border-1 border-[#e8e8e8] bg-[#f7f7f7];
+  }
 }
 
 @layer utilities {

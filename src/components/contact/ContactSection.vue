@@ -17,7 +17,7 @@
             professionals listens to your needs, provides tailored.
           </p>
           <div ref="buttonRef">
-            <ButtonPrimary link="#">Contact Us</ButtonPrimary>
+            <ButtonPrimary link="/contact">Contact Us</ButtonPrimary>
           </div>
         </div>
       </div>

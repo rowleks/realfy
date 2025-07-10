@@ -10,7 +10,7 @@
           </div>
         </div>
         <div ref="buttonRef">
-          <ButtonPrimary link="#">Contact Us</ButtonPrimary>
+          <ButtonPrimary link="/contact">Contact Us</ButtonPrimary>
         </div>
       </div>
       <div

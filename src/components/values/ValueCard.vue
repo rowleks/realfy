@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="space-y-8 p-5 rounded-xl md:rounded-3xl text-[#333] md:py-7 border-1 border-[#e8e8e8] bg-[#f7f7f7]"
-  >
+  <div class="info-card">
     <div>
       <img :src="img" :alt="value" />
     </div>
